@@ -160,7 +160,7 @@ export async function transcribeAudioWithGemini(audioBuffer: Buffer, rawMimeType
   const cleanMime = (rawMimeType || 'audio/ogg').split(';')[0].trim()
   const base64Audio = audioBuffer.toString('base64')
 
-  const prompt = 'Transcribe this audio/voice note accurately into text. Automatically detect the language (English, Roman Urdu, or Urdu). Return ONLY the verbatim transcribed text with no intro, explanation, or extra formatting.'
+  const prompt = 'Transcribe this audio exactly as spoken. Write Urdu speech in Roman Urdu (Latin script, not Urdu/Nastaliq script). If any words in the audio are in English, keep those exact words in English — do not translate them. Do not convert, translate, or paraphrase anything — this must be a literal, verbatim transcription of exactly what was said, in the language it was said in, just written in Latin letters throughout. Return ONLY the transcription with no explanation.'
 
   const models = await getAvailableFlashModels(keys[0])
 
