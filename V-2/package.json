@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx src/index.ts",
-    "start": "node dist/src/index.js",
-    "build": "tsc -p tsconfig.json",
+    "dev": "node init && tsx src/index.ts",
+    "start": "node init && node dist/src/index.js",
+    "build": "node init && tsc -p tsconfig.json",
     "test": "tsx --test test/commands.test.ts",
     "lint": "tsc --noEmit -p tsconfig.json"
   },
