@@ -15,6 +15,7 @@ dist/
 
 # WhatsApp auth sessions (never commit)
 auth_info/
+temp_auto_push.bat
 **/auth_info/
 auth_info_baileys/
 **/auth_info_baileys/
@@ -31,4 +32,5 @@ data/
 
 # Personal / local files
 user.json
-**/user.json
+**/user.json.gitignore
+branch_structure.json
